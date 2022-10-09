@@ -61,3 +61,40 @@ body {
 ul {
   padding-inline-start: 0px;
 }
+
+.apps-container {
+  position: fixed;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+.app__btn {
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  text-align: right;
+  padding: 8px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.AoE-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.AoE-container.start {
+  opacity: 1;
+  pointer-events: auto;
+}
