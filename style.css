@@ -1,0 +1,63 @@
+body {
+  background-image: url("./windows-98-background.jpg");
+}
+
+.startbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 40px;
+  width: 100vw;
+  background-color: lightgray;
+  border-top: 2px solid white;
+  padding: 3px;
+}
+.startbar__button {
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  text-align: right;
+  padding: 8px;
+  font-weight: bold;
+  width: 65px;
+  background-image: url("./98-start-logo.png");
+  background-size: auto 70%;
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+}
+
+.start-container {
+  background-color: lightgray;
+  position: absolute;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  bottom: 35px;
+  left: 3px;
+  opacity: 0;
+  pointer-events: none;
+}
+.start-container__link {
+  font-family: sans-serif;
+  font-weight: lighter;
+  list-style-type: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 70px;
+  font-size: 13px;
+  margin-left: 25px;
+  padding-inline-start: 0px;
+}
+
+.start-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
