@@ -15,6 +15,9 @@
                 <div>
                     <button id="open" class="startbar__button">Start</button>
                 </div>
+                <div>
+                    <p id="currentTime"></p>
+                </div>
             </div>
         </header>
 
@@ -45,6 +48,20 @@
                     src="./age_of_empires_desktop_icon_by_tarvanis_dbbyrgl.ico" />
                 <button id="startAoE" class="app__btn">Age of Empires</button>
             </div>
+            <div class="app">
+                <img class="app__img" src="./notepad-2.png" />
+                <button class="app__btn" id="startNotepad">Notepad</button>
+            </div>
+            <div class="app">
+                <img class="app__img" src="./msie1-2.png" />
+                <button class="app__btn" id="startInternet">
+                    Internet Explorer
+                </button>
+            </div>
+            <div class="app">
+                <img class="app__img" src="./minesweeper-0.png" />
+                <button class="app__btn" id="startInternet">Minesweeper</button>
+            </div>
         </div>
 
         <!--AoE modal-->
@@ -52,6 +69,32 @@
             <video width="720" height="640" controls>
                 <source src="./age-of-empires-1998.mp4" type="video/mp4" />
             </video>
+        </div>
+
+        <!--Notepad modal-->
+        <div>
+            <div>
+                <textarea
+                    id="notepad_container"
+                    class="notepad-container"
+                    type="textbox"></textarea>
+            </div>
+        </div>
+
+        <!--Internet Explorer modal-->
+        <div class="window" style="margin: 32px; width: 450px">
+            <div class="title-bar">
+                <div class="title-bar__text">Internet Explorer</div>
+
+                <div class="title-bar__navigation">
+                    <button class="minimise"></button>
+                    <button class="maximise"></button>
+                    <button class="exit"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Internet!</p>
+            </div>
         </div>
 
         <script src="script.js"></script>

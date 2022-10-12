@@ -15,3 +15,28 @@ const AoE_container = document.getElementById("AoE_container");
 startAoE.addEventListener("click", () => {
     AoE_container.classList.toggle("start");
 });
+
+// adding current time
+
+// const today = new Date();
+// const time = today.getHours() + ":" + today.getMinutes();
+// document.getElementById("currentTime").innerHTML = time;
+
+// trying am/pm format
+
+const today = new Date();
+const time = today.toLocaleString("en-AU", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+});
+document.getElementById("currentTime").innerHTML = time;
+
+// opening Notepad
+
+const startNotepad = document.getElementById("startNotepad");
+const notepad_container = document.getElementById("notepad_container");
+
+startNotepad.addEventListener("click", () => {
+    notepad_container.classList.toggle("start1");
+});

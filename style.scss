@@ -101,3 +101,77 @@ ul {
     opacity: 1;
     pointer-events: auto;
 }
+
+// fix styling/add class link under startbar styling
+// styling for time
+p {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 8px;
+    right: 0;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    text-align: right;
+    padding: 4px;
+    font-weight: bold;
+    width: 65px;
+}
+
+.notepad-container {
+    background-color: white;
+    height: 400px;
+    width: 200px;
+    position: fixed;
+    width: 40%;
+    top: 25%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, 0);
+    border: none;
+    outline: none;
+    resize: none;
+    opacity: 0;
+    pointer-events: none;
+    font-family: sans-serif;
+}
+
+.notepad-container.start1 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.window {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+        inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+}
+
+.title-bar {
+    align-items: center;
+    background: linear-gradient(90deg, navy, #1084d0);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+
+    &__text {
+        font-weight: bold;
+        color: white;
+        letter-spacing: 0;
+        margin-right: 24px;
+    }
+
+    &__navigation {
+        display: flex;
+    }
+
+    button {
+        padding: 0;
+        display: block;
+        min-width: 16px;
+        min-height: 14px;
+    }
+}
