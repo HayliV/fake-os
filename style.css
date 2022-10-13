@@ -142,6 +142,18 @@ p {
   background: silver;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
   padding: 3px;
+  position: fixed;
+  width: 40%;
+  height: 40%;
+  top: 25%;
+  left: 30%;
+  opacity: 0;
+  pointer-events: none;
+}
+.window__body {
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  padding: 3px;
 }
 
 .title-bar {
@@ -165,4 +177,9 @@ p {
   display: block;
   min-width: 16px;
   min-height: 14px;
+}
+
+.window.start2 {
+  opacity: 1;
+  pointer-events: auto;
 }

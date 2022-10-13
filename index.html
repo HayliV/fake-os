@@ -82,18 +82,29 @@
         </div>
 
         <!--Internet Explorer modal-->
-        <div class="window" style="margin: 32px; width: 450px">
+        <!--Faithful-ish recreation was helped by https://jdan.github.io/98.css/#window-->
+
+        <div class="window" id="window_container">
             <div class="title-bar">
                 <div class="title-bar__text">Internet Explorer</div>
 
                 <div class="title-bar__navigation">
-                    <button class="minimise"></button>
-                    <button class="maximise"></button>
-                    <button class="exit"></button>
+                    <button class="minimise">
+                        <img src="./minimize.svg" />
+                    </button>
+                    <button class="maximise">
+                        <img src="./maximize.svg" />
+                    </button>
+                    <button id="closeInternet" class="exit">
+                        <img src="close.svg" />
+                    </button>
                 </div>
             </div>
-            <div class="window-body">
-                <p>Internet!</p>
+            <div class="window__body">
+                <iframe
+                    src="https://theoldnet.com/get?decode=false&scripts=false&timestamp=19981111184551&url=http://google.stanford.edu"
+                    height="400px"
+                    width="100%"></iframe>
             </div>
         </div>
 

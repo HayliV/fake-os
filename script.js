@@ -40,3 +40,17 @@ const notepad_container = document.getElementById("notepad_container");
 startNotepad.addEventListener("click", () => {
     notepad_container.classList.toggle("start1");
 });
+
+// opening Internet Explorer
+
+const startInternet = document.getElementById("startInternet");
+const internetContainer = document.getElementById("window_container");
+const closeInternet = document.getElementById("closeInternet");
+
+startInternet.addEventListener("click", () => {
+    internetContainer.classList.add("start2");
+});
+
+closeInternet.addEventListener("click", () => {
+    internetContainer.classList.remove("start2");
+});
