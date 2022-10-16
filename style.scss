@@ -40,6 +40,8 @@ body {
     left: 3px;
     opacity: 0;
     pointer-events: none;
+    display: flex;
+    align-items: center;
 
     &__link {
         font-family: sans-serif;
@@ -52,7 +54,47 @@ body {
         font-size: 13px;
         margin-left: 25px;
         padding-inline-start: 0px;
+        display: flex;
+
+        align-items: center;
+        cursor: pointer;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 40px;
+        padding-right: 10px;
+        font-size: 13px;
+        background-size: auto 70%;
+        background-position: 5% 50%;
+        background-repeat: no-repeat;
+        white-space: nowrap;
     }
+}
+
+.start-container__start-side {
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    width: 150%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.start-side-background {
+    height: 100%;
+    background: linear-gradient(to bottom, #000080, #1084d0);
+    display: inline-block;
+    width: 25px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .start-container.show {
@@ -83,43 +125,11 @@ ul {
         color: white;
         font-family: sans-serif;
         text-align: right;
-        padding: 8px;
+        padding: 4px;
         font-weight: bold;
-        background-color: transparent;
+        background-color: #008080;
+        margin-top: 4px;
     }
-}
-
-.AoE-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.AoE-container.start {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-// fix styling/add class link under startbar styling
-// styling for time
-p {
-    color: black;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    margin-right: 2px;
-    right: 0;
-    border: 2px solid black;
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-    text-align: right;
-    padding: 4px;
-    font-weight: bold;
-    width: 70px;
 }
 
 // Notepad modal styling
@@ -180,33 +190,97 @@ p {
     }
 }
 
-.window-notepad.start1 {
+.window-notepad.visible {
     opacity: 1;
     pointer-events: auto;
 }
 
-// .notepad-container {
-//     background-color: white;
-//     height: 400px;
-//     width: 200px;
-//     position: fixed;
-//     width: 40%;
-//     top: 25%;
-//     left: 50%;
-//     padding: 20px;
-//     transform: translate(-50%, 0);
-//     border: none;
-//     outline: none;
-//     resize: none;
+.window-AoE {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+        inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    top: 25%;
+    left: 30%;
+    opacity: 1;
+    pointer-events: none;
+    opacity: 0;
+    &__body {
+        background: silver;
+        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+            inset -2px -2px grey, inset 2px 2px #fff;
+        padding: 3px;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+.title-bar-AoE {
+    align-items: center;
+    background: linear-gradient(90deg, navy, #1084d0);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+
+    &__text {
+        font-weight: bold;
+        color: white;
+        letter-spacing: 0;
+        margin-right: 24px;
+    }
+
+    &__navigation {
+        display: flex;
+    }
+
+    button {
+        padding: 0;
+        display: block;
+        min-width: 16px;
+        min-height: 14px;
+    }
+}
+
+.window-AoE.start {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+// .AoE-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 //     opacity: 0;
 //     pointer-events: none;
-//     font-family: sans-serif;
 // }
 
-// .notepad-container.start1 {
+// .AoE-container.start {
 //     opacity: 1;
 //     pointer-events: auto;
 // }
+
+// fix styling/add class link under startbar styling
+// styling for time
+p {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-right: 2px;
+    right: 0;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    text-align: right;
+    padding: 4px;
+    font-weight: bold;
+    width: 70px;
+}
 
 // Internet Explorer modal styling
 
@@ -258,6 +332,74 @@ p {
 }
 
 .window.start2 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+// Minesweeper styling
+
+.window-minesweeper {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+        inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    position: fixed;
+    width: 27%;
+    height: 40%;
+    top: 25%;
+    left: 30%;
+    opacity: 1;
+    pointer-events: auto;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    &__body {
+        background: silver;
+        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+            inset -2px -2px grey, inset 2px 2px #fff;
+        padding: 3px;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        padding: 0;
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+}
+
+.title-bar-minesweeper {
+    align-items: center;
+    background: linear-gradient(90deg, navy, #1084d0);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+
+    &__text {
+        font-weight: bold;
+        color: white;
+        letter-spacing: 0;
+        margin-right: 24px;
+    }
+
+    &__navigation {
+        display: flex;
+    }
+
+    button {
+        padding: 0;
+        display: block;
+        min-width: 16px;
+        min-height: 14px;
+    }
+}
+
+.window-minesweeper.start3 {
     opacity: 1;
     pointer-events: auto;
 }

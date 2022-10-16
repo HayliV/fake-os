@@ -7,15 +7,6 @@ open.addEventListener("click", () => {
     start_container.classList.toggle("show");
 });
 
-// opening Age of Empires App
-
-const startAoE = document.getElementById("startAoE");
-const AoE_container = document.getElementById("AoE_container");
-
-startAoE.addEventListener("click", () => {
-    AoE_container.classList.toggle("start");
-});
-
 // adding current time
 
 // const today = new Date();
@@ -34,17 +25,31 @@ setInterval(() => {
     document.getElementById("currentTime").innerHTML = time;
 }, 1000);
 
-// opening Notepad
+// opening notepad
 
 const startNotepad = document.getElementById("startNotepad");
-const notepad_container = document.getElementById("window_container_notepad");
+const notepad_container = document.getElementById("notepad");
 const closeNotepad = document.getElementById("closeNotepad");
 
 startNotepad.addEventListener("click", () => {
-    notepad_container.classList.add("start1");
+    notepad_container.classList.add("visible");
 });
 closeNotepad.addEventListener("click", () => {
-    notepad_container.classList.remove("start1");
+    notepad_container.classList.remove("visible");
+});
+
+// opening Age of Empires App
+
+const startAoE = document.getElementById("startAoE");
+const AoE_container = document.getElementById("window_container_AoE");
+const closeAoE = document.getElementById("closeAoE");
+
+startAoE.addEventListener("click", () => {
+    AoE_container.classList.add("start");
+});
+
+closeAoE.addEventListener("click", () => {
+    AoE_container.classList.remove("start");
 });
 
 // opening Internet Explorer
@@ -59,4 +64,18 @@ startInternet.addEventListener("click", () => {
 
 closeInternet.addEventListener("click", () => {
     internetContainer.classList.remove("start2");
+});
+
+// opening Minesweeper
+
+const startMinesweeper = document.getElementById("startMinesweeper");
+const minesweeperContainer = document.getElementById("window_minesweeper");
+const closeMinesweeper = document.getElementById("closeMinesweeper");
+
+startMinesweeper.addEventListener("click", () => {
+    minesweeperContainer.classList.add("start3");
+});
+
+closeMinesweeper.addEventListener("click", () => {
+    minesweeperContainer.classList.remove("start3");
 });

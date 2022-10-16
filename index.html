@@ -24,18 +24,20 @@
         <!--Start menu modal-->
 
         <div class="start-container" id="start_container">
+            <div class="start-side-background"></div>
+            <div class="start-container__start-side" >Windows 98</div>
             <div>
                 <ul>
-                    <li class="start-container__link">Programs</li>
-                    <li class="start-container__link">Photos</li>
-                    <li class="start-container__link">Applications</li>
-                    <li class="start-container__link">Games</li>
-                    <li class="start-container__link">Settings</li>
-                    <li class="start-container__link">Find</li>
-                    <li class="start-container__link">Help</li>
-                    <li class="start-container__link">Run</li>
-                    <li class="start-container__link">Log off</li>
-                    <li class="start-container__link">Shutdown</li>
+                    
+                    <li class="start-container__link"><img src ="./programs-folder-32x32.png"> Programs</li>
+                    <li class="start-container__link"><img src="./directory_favorites-0.png"> Favorites</li>
+                    <li class="start-container__link"><img src="./directory_open_file_mydocs-1.png"> Documents</li>
+                    <li class="start-container__link"><img src="./settings_gear-0.png">Settings</li>
+                    <li class="start-container__link"><img src="./search_file-1.png">Find</li>
+                    <li class="start-container__link"><img src="./help-32x32.png">Help</li>
+                    <li class="start-container__link"><img src="./run-32x32.png">Run</li>
+                    <li class="start-container__link"><img src="./logoff-32x32.png">Log off</li>
+                    <li class="start-container__link"><img src="./shut_down_normal-0.png">Shutdown</li>
                 </ul>
             </div>
         </div>
@@ -60,36 +62,54 @@
             </div>
             <div class="app">
                 <img class="app__img" src="./minesweeper-0.png" />
-                <button class="app__btn" id="startInternet">Minesweeper</button>
+                <button class="app__btn" id="startMinesweeper">Minesweeper</button>
             </div>
         </div>
 
         <!--AoE modal-->
-        <div class="AoE-container" id="AoE_container">
-            <video width="720" height="640" controls>
-                <source src="./age-of-empires-1998.mp4" type="video/mp4" />
-            </video>
-        </div>
+        <div class="window-AoE" id="window_container_AoE">
+            <div class="title-bar-AoE">
+                <div class="title-bar-AoE__text">Age of Empires</div>
 
-        <!--Notepad modal-->
-        <div class="window-notepad" id="window_container_notepad">
-            <div class="title-bar-notepad">
-                <div class="title-bar-notepad__text">Notepad</div>
-
-                <div class="title-bar-notepad__navigation">
+                <div class="title-bar-AoE__navigation">
                     <button class="minimise">
                         <img src="./minimize.svg" />
                     </button>
                     <button class="maximise">
                         <img src="./maximize.svg" />
                     </button>
-                    <button id="closeNotepad" class="exit">
+                    <button id="closeAoE" class="exit">
                         <img src="close.svg" />
                     </button>
                 </div>
             </div>
-            <div class="window-notepad__body">
-                <textarea class="window-notepad__text"></textarea>
+            <div class="window-AoE__body">
+                <video width="720" height="540" controls>
+                    <source src="./age-of-empires-1998.mp4" type="video/mp4" />
+                </video>
+            </div>
+            </div>
+        </div>
+
+            <!--Notepad modal-->
+            <div class="window-notepad" id="notepad">
+                <div class="title-bar-notepad">
+                    <div class="title-bar-notepad__text">Notepad</div>
+
+                    <div class="title-bar-notepad__navigation">
+                        <button class="minimise">
+                            <img src="./minimize.svg" />
+                        </button>
+                        <button class="maximise">
+                            <img src="./maximize.svg" />
+                        </button>
+                        <button id="closeNotepad" class="exit">
+                            <img src="close.svg" />
+                        </button>
+                    </div>
+                </div>
+                <div class="window-notepad__body">
+                    <textarea class="window-notepad__text"></textarea>
                 </div>
             </div>
         </div>
@@ -120,6 +140,35 @@
                     width="100%"></iframe>
             </div>
         </div>
+
+
+        <!--Minesweeper Modal-->
+
+        
+            <div class="window-minesweeper" id="window_minesweeper">
+                <div class="title-bar-minesweeper">
+                    <div class="title-bar__text">Minesweeper</div>
+    
+                    <div class="title-bar-minesweeper__navigation">
+                        <button class="minimise">
+                            <img src="./minimize.svg" />
+                        </button>
+                        <button class="maximise">
+                            <img src="./maximize.svg" />
+                        </button>
+                        <button id="closeMinesweeper" class="exit">
+                            <img src="close.svg" />
+                        </button>
+                    </div>
+                </div>
+                <div class="window-minesweeper__body">
+                    <iframe class="window-minesweeper__link"
+                        src="http://iconcept.bg/games/minesweeper"
+                        height="400px"
+                        width="100%"></iframe>
+                </div>
+            </div>
+        
 
         <script src="script.js"></script>
     </body>
