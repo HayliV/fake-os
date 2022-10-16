@@ -22,23 +22,29 @@ startAoE.addEventListener("click", () => {
 // const time = today.getHours() + ":" + today.getMinutes();
 // document.getElementById("currentTime").innerHTML = time;
 
-// trying am/pm format
+// trying am/pm format + adding set interval
 
-const today = new Date();
-const time = today.toLocaleString("en-AU", {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-});
-document.getElementById("currentTime").innerHTML = time;
+setInterval(() => {
+    const today = new Date();
+    const time = today.toLocaleString("en-AU", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+    });
+    document.getElementById("currentTime").innerHTML = time;
+}, 1000);
 
 // opening Notepad
 
 const startNotepad = document.getElementById("startNotepad");
-const notepad_container = document.getElementById("notepad_container");
+const notepad_container = document.getElementById("window_container_notepad");
+const closeNotepad = document.getElementById("closeNotepad");
 
 startNotepad.addEventListener("click", () => {
-    notepad_container.classList.toggle("start1");
+    notepad_container.classList.add("start1");
+});
+closeNotepad.addEventListener("click", () => {
+    notepad_container.classList.remove("start1");
 });
 
 // opening Internet Explorer

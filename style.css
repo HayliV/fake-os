@@ -104,6 +104,8 @@ p {
   position: fixed;
   bottom: 0;
   margin-bottom: 8px;
+  margin-top: 8px;
+  margin-right: 2px;
   right: 0;
   border: 2px solid black;
   text-decoration: none;
@@ -112,28 +114,59 @@ p {
   text-align: right;
   padding: 4px;
   font-weight: bold;
-  width: 65px;
+  width: 70px;
 }
 
-.notepad-container {
-  background-color: white;
-  height: 400px;
-  width: 200px;
+.window-notepad {
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  padding: 3px;
   position: fixed;
   width: 40%;
+  height: 40%;
   top: 25%;
-  left: 50%;
-  padding: 20px;
-  transform: translate(-50%, 0);
+  left: 30%;
+  opacity: 0;
+  pointer-events: none;
+}
+.window-notepad__body {
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  padding: 3px;
+  height: 470px;
+}
+.window-notepad__text {
+  width: 100%;
+  height: 470px;
   border: none;
   outline: none;
   resize: none;
-  opacity: 0;
-  pointer-events: none;
-  font-family: sans-serif;
 }
 
-.notepad-container.start1 {
+.title-bar-notepad {
+  align-items: center;
+  background: linear-gradient(90deg, navy, #1084d0);
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 2px 3px 3px;
+}
+.title-bar-notepad__text {
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0;
+  margin-right: 24px;
+}
+.title-bar-notepad__navigation {
+  display: flex;
+}
+.title-bar-notepad button {
+  padding: 0;
+  display: block;
+  min-width: 16px;
+  min-height: 14px;
+}
+
+.window-notepad.start1 {
   opacity: 1;
   pointer-events: auto;
 }

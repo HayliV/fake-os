@@ -72,12 +72,25 @@
         </div>
 
         <!--Notepad modal-->
-        <div>
-            <div>
-                <textarea
-                    id="notepad_container"
-                    class="notepad-container"
-                    type="textbox"></textarea>
+        <div class="window-notepad" id="window_container_notepad">
+            <div class="title-bar-notepad">
+                <div class="title-bar-notepad__text">Notepad</div>
+
+                <div class="title-bar-notepad__navigation">
+                    <button class="minimise">
+                        <img src="./minimize.svg" />
+                    </button>
+                    <button class="maximise">
+                        <img src="./maximize.svg" />
+                    </button>
+                    <button id="closeNotepad" class="exit">
+                        <img src="close.svg" />
+                    </button>
+                </div>
+            </div>
+            <div class="window-notepad__body">
+                <textarea class="window-notepad__text"></textarea>
+                </div>
             </div>
         </div>
 
