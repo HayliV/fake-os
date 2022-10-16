@@ -1,5 +1,7 @@
+@use "./partials/mixins";
+
 body {
-    background-image: url("./windows-98-background.jpg");
+    background-image: url("./images/windows-98-background.jpg");
 }
 
 .startbar {
@@ -22,7 +24,7 @@ body {
         padding: 8px;
         font-weight: bold;
         width: 65px;
-        background-image: url("./98-start-logo.png");
+        background-image: url("./images/98-start-logo.png");
         background-size: auto 70%;
         background-position: 5% 50%;
         background-repeat: no-repeat;
@@ -85,6 +87,9 @@ body {
     margin-bottom: 15px;
     display: flex;
     justify-content: flex-start;
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 .start-side-background {
@@ -135,17 +140,13 @@ ul {
 // Notepad modal styling
 
 .window-notepad {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
-        inset -2px -2px grey, inset 2px 2px #fff;
-    padding: 3px;
+    @include mixins.window-styling;
     position: fixed;
     width: 40%;
     height: 40%;
     top: 25%;
     left: 30%;
-    opacity: 0;
-    pointer-events: none;
+    @include mixins.hidden-window;
 
     &__body {
         background: silver;
@@ -196,18 +197,13 @@ ul {
 }
 
 .window-AoE {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
-        inset -2px -2px grey, inset 2px 2px #fff;
-    padding: 3px;
+    @include mixins.window-styling;
     position: fixed;
     width: fit-content;
     height: fit-content;
     top: 25%;
     left: 30%;
-    opacity: 1;
-    pointer-events: none;
-    opacity: 0;
+    @include mixins.hidden-window;
     &__body {
         background: silver;
         box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
@@ -285,17 +281,13 @@ p {
 // Internet Explorer modal styling
 
 .window {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
-        inset -2px -2px grey, inset 2px 2px #fff;
-    padding: 3px;
+    @include mixins.window-styling;
     position: fixed;
     width: 40%;
     height: 40%;
     top: 25%;
     left: 30%;
-    opacity: 0;
-    pointer-events: none;
+    @include mixins.hidden-window;
 
     &__body {
         background: silver;
@@ -339,10 +331,7 @@ p {
 // Minesweeper styling
 
 .window-minesweeper {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
-        inset -2px -2px grey, inset 2px 2px #fff;
-    padding: 3px;
+    @include mixins.window-styling;
     position: fixed;
     width: 27%;
     height: 40%;
@@ -353,8 +342,7 @@ p {
     scrollbar-width: none;
     overflow-x: hidden;
     overflow-y: hidden;
-    opacity: 0;
-    pointer-events: none;
+    @include mixins.hidden-window;
 
     &__body {
         background: silver;
